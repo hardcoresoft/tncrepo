@@ -16,7 +16,7 @@ class PromotionType {
 		promotionTypeName nullable: false, unique: true ,size: 1..500;
 		description size: 1..1000;
 		activeStatus();
-		dateCreated();
+		dateCreated();    
 		lastUpdated();
 		
     }
