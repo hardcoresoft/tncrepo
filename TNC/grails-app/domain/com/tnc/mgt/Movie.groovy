@@ -20,7 +20,7 @@ class Movie {
 		director 			blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'
 		actor 				blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'
 		synopsis 			widget:'textarea', size: 1..2000
-		releasedDate 		blank:false, nullable: false, min: new Date().clearTime()
+		releasedDate 		blank:false, nullable: false, min: new Date().clearTime()  
 		exiprationDate 		blank:false, nullable: false, min: new Date().clearTime()
 		activeStatus 		widget:'radio'
 		//		movieImage 			nullable: true,  maxSize:1024
