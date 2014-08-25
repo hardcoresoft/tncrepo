@@ -8,7 +8,7 @@ class PromotionType {
 	String description;
 	Date dateCreated;
 	Date lastUpdated;
-	Boolean activeStatus = false; 
+	Boolean activeStatus = false;   
 
 	static hasMany = [promotions:Promotion];
 	
