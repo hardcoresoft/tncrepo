@@ -13,9 +13,9 @@ class Movie {
 
 	static constraints = {
 
-		movieNameTH 		blank:false, nullable: false, maxLength:2, size: 1..500
-		movieNameEN 		blank:false, nullable: false, maxLength:100, size: 1..500
-		movieNameDisplay	blank:false, nullable: false, maxLength:100, size: 1..500
+		movieNameTH 		blank:false, nullable: false, maxSize:2, size: 1..500
+		movieNameEN 		blank:false, nullable: false, maxSize:500, size: 1..500
+		movieNameDisplay	blank:false, nullable: false, maxSize:500, size: 1..500
 		duration			blank:false, nullable: false, size: 1..10
 		director 			blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'
 		actor 				blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'

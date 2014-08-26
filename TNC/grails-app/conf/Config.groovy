@@ -115,3 +115,8 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//add defualt not mandatory attribute
+grails.gorm.default.constraints = {
+	'*'(nullable: true)
+}
