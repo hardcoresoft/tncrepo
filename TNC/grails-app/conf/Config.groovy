@@ -129,3 +129,23 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//add defualt not mandatory attribute
+grails.gorm.default.constraints = {
+	'*'(nullable: true)
+}
+
+grails.views.javascript.library="jqueryPicker"
+
+jqueryDateTimePicker {
+	format {
+		java {
+			datetime = "dd-MM-yyyy HH:mm"
+			date = "dd-MM-yyyy"
+		}
+		picker {
+			date = "'dd-mm-yy'"
+			time = "'H-mm'"
+		}
+	}
+}
