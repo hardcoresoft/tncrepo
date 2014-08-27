@@ -2,8 +2,6 @@ package com.tnc.mgt
 
 import java.util.Date;
 
-import com.tnc.user.User;
-
 class Branch {
 
 	static mapping = {}
@@ -22,5 +20,4 @@ class Branch {
 	Date dateCreated
 	Date lastUpdated
 
-	static belongsTo = [createdBy:User, updatedBy:User]
 }

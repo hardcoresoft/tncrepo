@@ -2,23 +2,20 @@ package com.tnc.booking
 
 import java.util.Date;
 
-import org.springframework.jdbc.core.SqlTypeValue;
-
 import com.tnc.mgt.Showtime;
 import com.tnc.promotion.Coupon;
 import com.tnc.user.Member;
-import com.tnc.user.User;
 
 class Booking {
 
 	static mapping = {}
 
 	static constraints = {
-		bookingNo		blank:false, unique:true, size: 1..20
+		bookingNo		blank:false, unique:true, maxSize: 20
 		bookingDate		validator: {return (it >= new Date().clearTime())}
 	}
 
-	static belongsTo = [showTime:Showtime, createdBy:User, member:Member]
+	static belongsTo = [showTime:Showtime]
 	static hasMany = [tickets:Ticket, coupons:Coupon]
 
 	String bookingNo
