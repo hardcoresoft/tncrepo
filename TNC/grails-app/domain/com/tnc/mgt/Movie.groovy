@@ -13,13 +13,13 @@ class Movie {
 
 	static constraints = {
 
-		movieNameTH 		blank:false, nullable: false, maxSize:2, size: 1..500
-		movieNameEN 		blank:false, nullable: false, maxSize:500, size: 1..500
-		movieNameDisplay	blank:false, nullable: false, maxSize:500, size: 1..500
-		duration			blank:false, nullable: false, size: 1..10
-		director 			blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'
-		actor 				blank:false, nullable: false, maxSize: 100, size: 1..500, widget:'textarea'
-		synopsis 			widget:'textarea', size: 1..2000
+		movieNameTH 		blank:false, nullable: false, maxSize:500
+		movieNameEN 		blank:false, nullable: false, maxSize:500
+		movieNameDisplay	blank:false, nullable: false, maxSize:500
+		duration			blank:false, nullable: false
+		director 			blank:false, nullable: false, maxSize: 500, widget:'textarea'
+		actor 				blank:false, nullable: false, maxSize: 500, widget:'textarea'
+		synopsis 			widget:'textarea', maxSize: 2000
 		releasedDate 		blank:false, nullable: false, min: new Date().clearTime()  
 		exiprationDate 		blank:false, nullable: false, min: new Date().clearTime()
 		activeStatus 		widget:'radio'

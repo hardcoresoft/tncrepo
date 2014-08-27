@@ -7,7 +7,7 @@
 		<g:message code="movie.movieNameTH.label" default="Movie Name TH" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="movieNameTH" maxlength="2" required="" value="${movieInstance?.movieNameTH}"/>
+	<g:textField name="movieNameTH" maxlength="500" required="" value="${movieInstance?.movieNameTH}"/>
 
 </div>
 
@@ -16,7 +16,7 @@
 		<g:message code="movie.movieNameEN.label" default="Movie Name EN" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="movieNameEN" cols="40" rows="5" maxlength="500" required="" value="${movieInstance?.movieNameEN}"/>
+	<g:textField name="movieNameEN" maxlength="500" required="" value="${movieInstance?.movieNameEN}"/>
 
 </div>
 
@@ -25,7 +25,7 @@
 		<g:message code="movie.movieNameDisplay.label" default="Movie Name Display" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="movieNameDisplay" cols="40" rows="5" maxlength="500" required="" value="${movieInstance?.movieNameDisplay}"/>
+	<g:textField name="movieNameDisplay" maxlength="500" required="" value="${movieInstance?.movieNameDisplay}"/>
 
 </div>
 
@@ -70,7 +70,10 @@
 		<g:message code="movie.releasedDate.label" default="Released Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="releasedDate" precision="day"  value="${movieInstance?.releasedDate}"  />
+<%--	<g:datePicker name="releasedDate" precision="minute"  value="${movieInstance?.releasedDate}"  />--%>
+<%--	<jqueryPicker:time name="releasedDate" value="${movieInstance?.releasedDate}" timeZone="${TimeZone.getTimeZone('GMT')}" />--%>
+	<jqueryPicker:date name="releasedDate" value="${movieInstance.releasedDate}" />
+	<jqueryPicker:time name="releasedDate" value="${movieInstance.releasedDate}" />
 
 </div>
 
